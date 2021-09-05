@@ -18,19 +18,33 @@ function deleteTodo(e) {
   saveToDos();
 }
 
+function checked(e) {
+  const li = e.target.parentElement;
+  li.childNodes[1].classList.toggle("checked");
+}
+
 function paintToDo(newTodo) {
   const li = document.createElement("li");
   li.id = newTodo.id;
-  const checkbox = document.createElement("input");
-  checkbox.type = "checkbox";
+  const checkbox = document.createElement("span");
+  checkbox.id = "checkbox";
+  checkbox.innerText = "✅";
+  checkbox.addEventListener("mouseover", () => {
+    checkbox.innerText = "☑️";
+  });
+  checkbox.addEventListener("mouseleave", () => {
+    checkbox.innerText = "✅";
+  });
+  checkbox.addEventListener("click", checked);
   const span = document.createElement("span");
   span.innerText = newTodo.text;
-  const button = document.createElement("button");
-  button.innerText = "  ❌";
-  button.addEventListener("click", deleteTodo);
+  const deleteBtn = document.createElement("span");
+  deleteBtn.id = "deleteBtn";
+  deleteBtn.innerText = " ❌";
+  deleteBtn.addEventListener("click", deleteTodo);
   li.appendChild(checkbox);
   li.appendChild(span);
-  li.appendChild(button);
+  li.appendChild(deleteBtn);
   toDoList.append(li);
 }
 

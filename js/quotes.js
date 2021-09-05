@@ -1,4 +1,4 @@
-quoteBtn = document.getElementById("quoteBtn");
+const quoteBtn = document.getElementById("quoteBtn");
 const quotes = [
   {
     quote:

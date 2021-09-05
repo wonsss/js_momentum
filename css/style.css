@@ -97,6 +97,7 @@ button:hover {
 }
 
 #ddayOutput {
+  margin-top: 20px;
   color: white;
   opacity: 70%;
 }
@@ -169,6 +170,7 @@ button:hover {
 }
 
 #todo-form input {
+  margin-top: 20px;
   text-align: center;
   width: 330px;
   background-color: transparent;
@@ -180,24 +182,33 @@ button:hover {
 }
 
 #todo-list {
+  line-height: 1.6;
+  margin-top: 30px;
   text-align: start;
   font-size: 23px;
   color: white;
   opacity: 60%;
-  margin-top: 15px;
   margin-left: 30px;
   height: 70vh;
   overflow-y: auto;
 }
 
-#todo-list button {
-  border-radius: 200px;
-  background-color: transparent;
-  border: none;
+#checkbox {
+  cursor: pointer;
 }
 
-#todo-list button:hover {
-  background-color: rgba(173, 173, 173, 0.6);
+.checked {
+  text-decoration-line: line-through;
+  text-decoration-color: greenyellow;
+  text-decoration-thickness: 3px;
+}
+
+#deleteBtn {
+  cursor: pointer;
+}
+
+#deleteBtn:hover {
+  cursor: pointer;
   border: none;
 }
 
@@ -232,7 +243,7 @@ button:hover {
 }
 
 #quote {
-  margin-top: 180px;
+  margin-top: 160px;
   padding: 0px 20px;
   font-size: 20px;
   color: white;
