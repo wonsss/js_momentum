@@ -1,5 +1,5 @@
-const toDoForm = document.getElementById("todo-form");
-const toDoInput = document.querySelector("#todo-form input");
+let toDoForm = document.getElementById("todo-form");
+const toDoInput = toDoForm.querySelector("input");
 
 const toDoList = document.getElementById("todo-list");
 let toDos = []; //이 배열 시작할 때 localStorage에서 발견되는 이전의 toDo들로 시작하고 싶다
@@ -63,12 +63,6 @@ function handleToDoSubmit(e) {
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
-
-function sayHello(item) {
-  console.log(item);
-  const newTodo = item;
-  paintToDo(newTodo);
-}
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
