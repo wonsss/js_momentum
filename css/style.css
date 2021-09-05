@@ -272,7 +272,7 @@ button:hover {
   color: white;
 }
 
-.weather {
+#weather {
   font-size: 25px;
   font-weight: bold;
   color: white;
