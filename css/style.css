@@ -3,143 +3,307 @@
 }
 
 .background {
-  margin: 0 auto;
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.background-cover {
-  margin: 0 auto;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+  filter: brightness(50%);
 }
 
 body {
-  /*font-family: 'BMJUA';*/
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0 auto;
+  color: white;
+}
+
+input::-ms-input-placeholder {
+  color: white;
+}
+input::-webkit-input-placeholder {
+  color: white;
+}
+input::-moz-placeholder {
+  color: white;
 }
 
 ul {
   list-style: none;
 }
 
-input[type="text"] {
-  width: 150px;
-  height: 25px;
-  border: 3px solid whitesmoke;
-  border-radius: 5px;
+button {
+  cursor: pointer;
 }
 
-input[type="text"]:focus {
-  width: 150px;
-  height: 25px;
-  border: 3px solid whitesmoke;
-  border-radius: 5px;
+button:hover {
+  background-color: black;
+  opacity: 60%;
+  color: white;
 }
 
 #logout {
-  position: absolute;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  border: 3px solid whitesmoke;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 60%;
+  width: 80px;
+  height: 25px;
+  border: none;
   border-radius: 5px;
-  text-align: center;
-  font-size: 15px;
-  opacity: 60%;
+  color: black;
+  background-color: whitesmoke;
 }
 
-#login-form .loginBtn {
-  border: 3px solid whitesmoke;
-  border-radius: 5px;
-  font-size: 15px;
-}
-
-#todo-form {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  text-align: center;
-  font-size: 15px;
-  color: whitesmoke;
+#logout:hover {
+  background-color: black;
   opacity: 60%;
-}
-
-#todo-list {
-  position: absolute;
-  top: 50%;
-  left: 75%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  text-align: center;
-  font-size: 25px;
-  color: whitesmoke;
-  opacity: 60%;
+  color: white;
 }
 
 #login-form {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+  font-size: 20px;
+  text-align: center;
+}
+
+.login-input {
+  /* width: 220px; */
+  background-color: transparent;
+  border: none;
+  border-bottom: 2.5px solid;
+  outline: none;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+
+.loginBtn {
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 60%;
+  width: 80px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  background-color: whitesmoke;
+}
+
+.loginBtn:hover {
+  background-color: black;
+  opacity: 60%;
+  color: white;
+}
+
+#ddayOutput {
+  color: white;
+  opacity: 70%;
+}
+.ddaytimer {
+  font-size: 40px;
+  font-weight: bold;
+}
+.memoryDday {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#timer-form {
+  margin-top: 10px;
+  height: 25px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  opacity: 70%;
+}
+
+#timer-form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2.5px solid;
+  outline: none;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+}
+
+.timerBtn {
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 60%;
+  width: 120px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  background-color: whitesmoke;
+}
+
+#resetBtn {
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 60%;
+  height: 25px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  background-color: whitesmoke;
+}
+
+#resetBtn:hover {
+  background-color: black;
+  opacity: 60%;
+  color: white;
+}
+
+#todo-form {
   text-align: center;
   font-size: 15px;
-  color: whitesmoke;
+  color: white;
+  opacity: 60%;
+}
+
+#todo-form input {
+  text-align: center;
+  width: 330px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2.5px solid;
+  outline: none;
+  color: white;
+  font-size: 23px;
+}
+
+#todo-list {
+  text-align: start;
+  font-size: 23px;
+  color: white;
+  opacity: 60%;
+  margin-top: 15px;
+  margin-left: 30px;
+  height: 70vh;
+  overflow-y: auto;
+}
+
+#todo-list button {
+  border-radius: 200px;
+  background-color: transparent;
+  border: none;
+}
+
+#todo-list button:hover {
+  background-color: rgba(173, 173, 173, 0.6);
+  border: none;
+}
+
+#todo-list input {
+  cursor: pointer;
+}
+
+#login-form {
+  text-align: center;
+  font-size: 20px;
+  color: white;
   opacity: 60%;
 }
 
 #greeting {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  text-align: center;
   font-size: 30px;
-  color: whitesmoke;
+  color: white;
   opacity: 60%;
 }
 
 #clock {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  text-align: center;
   font-size: 90px;
-  color: whitesmoke;
+  color: white;
   opacity: 60%;
 }
+
+#today {
+  font-size: 30px;
+  color: white;
+  opacity: 60%;
+  font-weight: bold;
+}
+
 #quote {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  text-align: center;
-  font-size: 15x;
-  color: whitesmoke;
+  padding: 0px 20px;
+  margin-top: 150px;
+  font-size: 20px;
+  color: white;
+  opacity: 80%;
+  line-height: 1.7;
+  line-break: strict;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+#quoteBtn {
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 60%;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  background-color: whitesmoke;
+}
+
+#quoteBtn:hover {
+  background-color: black;
+  opacity: 60%;
+  color: white;
+}
+
+#weather {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
   opacity: 60%;
 }
-#weather {
-  position: absolute;
-  top: 10%;
-  left: 90%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+
+.contents {
+  width: 90%;
+  margin: 50px auto;
+  height: 800px;
+  display: flex;
+}
+
+.gridA {
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 20px;
+  flex: 1;
+  width: 30%;
+  box-sizing: border-box;
+  border-radius: 15px;
   text-align: center;
-  font-size: 15px;
-  color: whitesmoke;
-  opacity: 60%;
+}
+
+.gridB {
+  background-color: transparent;
+  padding: 20px;
+  flex: 1;
+  margin: 0px 5%;
+  width: 30%;
+  box-sizing: border-box;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.gridC {
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 20px;
+  flex: 1;
+  width: 30%;
+  box-sizing: border-box;
+  border-radius: 15px;
+  text-align: center;
 }

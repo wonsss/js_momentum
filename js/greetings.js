@@ -6,7 +6,7 @@ const logout = document.querySelector("#logout");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 function paintGreetings(nameInput) {
-  greeting.innerText = `Hello ${nameInput}`;
+  greeting.innerHTML = `Hello. ${nameInput} 💜 <br> It's.gonna be a good day 😊`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 

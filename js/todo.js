@@ -21,13 +21,14 @@ function deleteTodo(e) {
 function paintToDo(newTodo) {
   const li = document.createElement("li");
   li.id = newTodo.id;
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
   const span = document.createElement("span");
   span.innerText = newTodo.text;
-
   const button = document.createElement("button");
-  button.innerText = "❌";
+  button.innerText = "  ❌";
   button.addEventListener("click", deleteTodo);
-
+  li.appendChild(checkbox);
   li.appendChild(span);
   li.appendChild(button);
   toDoList.prepend(li);
