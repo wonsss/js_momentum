@@ -11,11 +11,16 @@ const DDAY_KEY = "dday";
 const DDAYNAME_KEY = "ddayName1";
 const DDAYFULL_KEY = "ddayFull";
 
-function paintTimer(day, ddayName1, ddayFull) {
+function paintTimer(ddayName1, ddayFull) {
+  const targetDate = new Date(ddayFull);
+  const nowDate = new Date();
+  const differ = parseInt(targetDate.getTime() - nowDate.getTime(), 10);
+  const differSec = differ / 1000;
+  const day = Math.floor(differSec / 86400);
   if (day > 0) {
     ddaytimer.innerHTML = `D-Day ${day}`;
   } else {
-    ddaytimer.innerHTML = `D-Day +${day.substr(1, day.length)}`;
+    ddaytimer.innerHTML = `${day} days passed`;
   }
   memoryDday.innerText = `${ddayName1}(${ddayFull})`;
 }
@@ -30,8 +35,8 @@ function handleTimer() {
   const differSec = differ / 1000;
   const day = Math.floor(differSec / 86400);
   const ddayName1 = ddayName.value;
-  const ddayFull = `${yearInput}. ${monthInput}. ${dayInput}.`;
-  paintTimer(day, ddayName1, ddayFull);
+  const ddayFull = `${yearInput}.${monthInput}.${dayInput}.`;
+  paintTimer(ddayName1, ddayFull);
 
   localStorage.setItem(DDAY_KEY, day);
   localStorage.setItem(DDAYNAME_KEY, ddayName1);
@@ -43,6 +48,8 @@ function handleTimer() {
 function showHandleTimer() {
   timer.classList.remove("hidden");
   resetBtn.classList.add("hidden");
+  ddayOutput.innerText = "";
+  memoryDday.innerText = "";
 }
 
 const savedDday = localStorage.getItem(DDAY_KEY);
@@ -51,7 +58,7 @@ const savedDdayFull = localStorage.getItem(DDAYFULL_KEY);
 
 if (savedDdayname !== null) {
   ddayOutput.classList.remove("hidden");
-  paintTimer(savedDday, savedDdayname, savedDdayFull);
+  paintTimer(savedDdayname, savedDdayFull);
   timer.classList.add("hidden");
   resetBtn.classList.remove("hidden");
 }
