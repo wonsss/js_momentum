@@ -20,8 +20,9 @@ function paintTimer(ddayName1, ddayFull) {
   if (day > 0) {
     ddaytimer.innerHTML = `D-Day ${day}`;
   } else {
-    ddaytimer.innerHTML = `${day} days passed`;
+    ddaytimer.innerHTML = `${Math.abs(day)} days passed`;
   }
+
   memoryDday.innerText = `${ddayName1}(${ddayFull})`;
 }
 
@@ -37,7 +38,6 @@ function handleTimer() {
   const ddayName1 = ddayName.value;
   const ddayFull = `${yearInput}.${monthInput}.${dayInput}.`;
   paintTimer(ddayName1, ddayFull);
-
   localStorage.setItem(DDAY_KEY, day);
   localStorage.setItem(DDAYNAME_KEY, ddayName1);
   localStorage.setItem(DDAYFULL_KEY, ddayFull);
