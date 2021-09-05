@@ -31,7 +31,7 @@ function paintToDo(newTodo) {
   li.appendChild(checkbox);
   li.appendChild(span);
   li.appendChild(button);
-  toDoList.prepend(li);
+  toDoList.append(li);
 }
 
 function handleToDoSubmit(e) {
