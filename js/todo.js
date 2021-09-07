@@ -30,7 +30,7 @@ function paintToDo(newTodo) {
   checkbox.id = "checkbox";
   checkbox.innerText = "✅";
   checkbox.addEventListener("mouseover", () => {
-    checkbox.innerText = "☑️";
+    checkbox.innerText = "🔥";
   });
   checkbox.addEventListener("mouseleave", () => {
     checkbox.innerText = "✅";
