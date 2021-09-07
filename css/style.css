@@ -122,6 +122,7 @@ button:hover {
 
 #timer-form input {
   background-color: transparent;
+  width: 120px;
   border: none;
   border-bottom: 2.5px solid;
   outline: none;
