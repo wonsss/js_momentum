@@ -60,7 +60,7 @@ function getClock() {
   const minutes = String(date.getMinutes()).padStart("0");
   const month = String(date.getMonth() - 1);
   const dateNum = String(date.getDate());
-  return (`The last time you stopped was ${hours}:${minutes}(${month}. ${dateNum}.).`)
+  return (`The last time you focused was ${hours}:${minutes}(${month}. ${dateNum}.).`)
 }
 
 
