@@ -4,7 +4,7 @@ const dayArray = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
 function getClock() {
   const date = new Date();
-  const hours = date.getHours() > 12 ? `PM ${String(date.getHours()).padStart(2, "0")-12}` : `AM ${String(date.getHours()).padStart(2, "0")}`;
+  const hours = date.getHours() > 12 ? `PM ${String(date.getHours()-12).padStart(2, "0")}` : `AM ${String(date.getHours()).padStart(2, "0")}`;
   const minutes = String(date.getMinutes()).padStart(2, "0");
   // const seconds = String(date.getSeconds()).padStart(2, "0");
   const year = date.getFullYear();
