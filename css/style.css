@@ -340,7 +340,14 @@ button:hover {
 }
 
 #stopwatch {
-  opacity: 60%;
   font-size: 40px;
   color: white;
+  opacity: 90%;
+  font-weight: bold;
+}
+
+#focustime {
+  font-size: 25px;
+  color: white;
+  opacity: 80%;
 }
