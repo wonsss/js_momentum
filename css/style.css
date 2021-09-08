@@ -63,6 +63,7 @@ button:hover {
 }
 
 #login-form {
+  margin-top: 50px;
   font-size: 20px;
   text-align: center;
 }
@@ -81,13 +82,12 @@ button:hover {
 .loginBtn {
   cursor: pointer;
   font-size: 20px;
-  opacity: 60%;
   width: 80px;
   height: 25px;
   border: none;
   border-radius: 5px;
   color: black;
-  background-color: whitesmoke;
+  background-color: white  opacity: 60%; 
 }
 
 .loginBtn:hover {
@@ -147,9 +147,23 @@ button:hover {
   background-color: whitesmoke;
 }
 
+#bgBtn {
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 60%;
+
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  background-color: whitesmoke;
+}
+
 #start:hover,
 #stop:hover,
-#reset:hover {
+#reset:hover,
+#bgBtn:hover {
   background-color: black;
   opacity: 60%;
   color: white;
@@ -238,19 +252,19 @@ button:hover {
 #greeting {
   font-size: 30px;
   color: white;
-  opacity: 60%;
+  opacity: 80%;
 }
 
 #clock {
   font-size: 90px;
   color: white;
-  opacity: 60%;
+  opacity: 80%;
 }
 
 #today {
   font-size: 42px;
   color: white;
-  opacity: 60%;
+  opacity: 80%;
   font-weight: bold;
 }
 
@@ -288,7 +302,7 @@ button:hover {
   font-size: 25px;
   font-weight: bold;
   color: white;
-  opacity: 60%;
+  opacity: 80%;
 }
 
 .contents {
