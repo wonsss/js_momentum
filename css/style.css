@@ -199,13 +199,13 @@ button:hover {
 #todo-form input {
   margin-top: 20px;
   text-align: center;
-  width: 330px;
+  width: 350px;
   background-color: transparent;
   border: none;
   border-bottom: 2.5px solid;
   outline: none;
   color: white;
-  font-size: 23px;
+  font-size: 25px;
 }
 
 #todo-list {
