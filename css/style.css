@@ -193,7 +193,7 @@ button:hover {
   text-align: center;
   font-size: 15px;
   color: white;
-  opacity: 60%;
+  opacity: 80%;
 }
 
 #todo-form input {
@@ -210,12 +210,11 @@ button:hover {
 
 #todo-list {
   line-height: 1.6;
-  margin-top: 30px;
   text-align: start;
   font-size: 23px;
   color: white;
-  opacity: 60%;
-  margin-left: 30px;
+  opacity: 80%;
+  margin: 30px 10px 0px 0px;
   height: 70vh;
   overflow-y: auto;
 }
@@ -338,7 +337,7 @@ button:hover {
 .gridC {
   margin-top: 20px;
   background-color: rgba(0, 0, 0, 0.55);
-  padding: 20px;
+  padding: 10px;
   flex: 1;
   width: 30%;
   box-sizing: border-box;
