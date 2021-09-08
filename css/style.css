@@ -131,7 +131,10 @@ button:hover {
   text-align: center;
 }
 
-.timerBtn {
+.timerBtn,
+#start,
+#stop,
+#reset {
   margin-top: 15px;
   cursor: pointer;
   font-size: 20px;
@@ -142,6 +145,14 @@ button:hover {
   border-radius: 5px;
   color: black;
   background-color: whitesmoke;
+}
+
+#start:hover,
+#stop:hover,
+#reset:hover {
+  background-color: black;
+  opacity: 60%;
+  color: white;
 }
 
 #resetBtn {
@@ -318,4 +329,18 @@ button:hover {
   box-sizing: border-box;
   border-radius: 15px;
   text-align: center;
+}
+
+.stopwatch {
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#stopwatch {
+  opacity: 60%;
+  font-size: 40px;
+  color: white;
 }

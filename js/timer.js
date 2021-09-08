@@ -32,7 +32,7 @@ function handleTimer() {
   const dayInput = parseInt(day1.value, 10);
   const nowDate = new Date();
   const targetDate = new Date(yearInput, monthInput - 1, dayInput);
-  const differ = parseInt(targetDate.getTime() - nowDate.getTime(), 10);
+  const differ = parseInt(targetDate.getTime() - nowDate.getTim2e(), 10);
   const differSec = differ / 1000;
   const day = Math.floor(differSec / 86400);
   const ddayName1 = ddayName.value;
