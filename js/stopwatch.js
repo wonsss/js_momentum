@@ -4,7 +4,9 @@ const swStartBtn = document.getElementById("start");
 const swStopBtn = document.getElementById("stop");
 const swResetBtn = document.getElementById("reset");
 const focusTime = document.getElementById("focustime");
+const lasttimeSpan = document.getElementById("lasttime")
 const STOPWATCH_KEY = "stopwatch";
+const LASTTIME_KEY = "lasttime"
 let seconds = 0;
 
 function startWatch() {
@@ -52,12 +54,23 @@ function resetWatch() {
   focusTime.innerText = "⏹️ Focus Time"
 }
 
+function getClock() {
+  const date = new Date();
+  const hours = date.getHours() > 12 ? `PM ${String(date.getHours()-12).padStart(2, "0")}` : `AM ${String(date.getHours()).padStart(2, "0")}`;
+  const minutes = String(date.getMinutes()).padStart("0");
+  const month = String(date.getMonth() - 1);
+  const dateNum = String(date.getDate());
+  return (`The last time you stopped was ${hours}:${minutes}(${month}. ${dateNum}.).`)
+}
+
+
 function recordWatch(event) {
     // 표준에 따라 기본 동작 방지
     event.preventDefault();
     // Chrome에서는 returnValue 설정이 필요함
     event.returnValue = '';
     localStorage.setItem(STOPWATCH_KEY, startWatch());
+    localStorage.setItem(LASTTIME_KEY, getClock());
 }
 
 function getRecord() {
@@ -71,6 +84,7 @@ function getRecord() {
   if (seconds > 0 ){
     swDiv.style.backgroundColor = "rgba(255, 41, 41, 0.55)";
   }
+  lasttimeSpan.innerText = localStorage.getItem(LASTTIME_KEY);
 }
 
 swStartBtn.addEventListener("click", startWatch);

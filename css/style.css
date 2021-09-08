@@ -87,7 +87,8 @@ button:hover {
   border: none;
   border-radius: 5px;
   color: black;
-  background-color: white  opacity: 60%; 
+  background-color: white;
+  opacity: 60%;
 }
 
 .loginBtn:hover {
@@ -361,6 +362,12 @@ button:hover {
 }
 
 #focustime {
+  font-size: 25px;
+  color: white;
+  opacity: 80%;
+}
+
+#lasttime {
   font-size: 25px;
   color: white;
   opacity: 80%;
