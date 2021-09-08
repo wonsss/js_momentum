@@ -361,13 +361,13 @@ button:hover {
 }
 
 #focustime {
-  font-size: 25px;
+  font-size: 27px;
   color: white;
   opacity: 80%;
 }
 
-#lasttime {
+#lasttime,
+#lasttimeTitle {
   font-size: 27px;
-  color: white;
   opacity: 60%;
 }

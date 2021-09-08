@@ -5,6 +5,7 @@ const swStopBtn = document.getElementById("stop");
 const swResetBtn = document.getElementById("reset");
 const focusTime = document.getElementById("focustime");
 const lasttimeSpan = document.getElementById("lasttime")
+const lasttitmeTitle = document.getElementById("lasttimeTitle")
 const STOPWATCH_KEY = "stopwatch";
 const LASTTIME_KEY = "lasttime"
 let seconds = 0;
@@ -20,6 +21,8 @@ function startWatch() {
     focusTime.innerText = "🔥 Focus Time"
   }, 1000);
   swDiv.style.backgroundColor = "rgba(0, 255, 106, 0.55)";
+  lasttimeTitle.innerText = "You restarted to focus at ";
+  lasttimeSpan.innerText = getClock();
   return seconds;
 }
 
@@ -38,6 +41,8 @@ function stopWatch() {
   let sec = parseInt((seconds % 3600) % 60);
   document.title = `⏹️ ${addZero(hour)}:${addZero(min)}:${addZero(sec)}`;
   focusTime.innerText = "⏹️ Focus Time"
+  lasttimeTitle.innerText = "You stopped focusing at ";
+  lasttimeSpan.innerText = getClock();
 }
 
 function resetWatch() {
@@ -60,7 +65,7 @@ function getClock() {
   const minutes = String(date.getMinutes()).padStart(2,"0");
   const month = String(date.getMonth() - 1);
   const dateNum = String(date.getDate());
-  return (`The last time you focused was ${hours}:${minutes}(${month}. ${dateNum}.).`)
+  return (`${hours}:${minutes}(${month}. ${dateNum}.).`)
 }
 
 
@@ -84,6 +89,7 @@ function getRecord() {
   if (seconds > 0 ){
     swDiv.style.backgroundColor = "rgba(255, 41, 41, 0.55)";
   }
+  lasttimeTitle.innerText = "You stopped focusing at ";
   lasttimeSpan.innerText = localStorage.getItem(LASTTIME_KEY);
 }
 
