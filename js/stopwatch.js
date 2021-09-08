@@ -6,10 +6,6 @@ const swResetBtn = document.getElementById("reset");
 const focusTime = document.getElementById("focustime");
 const STOPWATCH_KEY = "stopwatch";
 let seconds = 0;
-// function loadWatch(getRecord) {
-//   seconds = getRecord;
-//   startWatch();
-// } 
 
 function startWatch() {
   timerStart = setInterval(function(){
