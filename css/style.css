@@ -145,7 +145,7 @@ button:hover {
   border: none;
   border-radius: 5px;
   color: black;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 #bgBtn {
@@ -158,14 +158,14 @@ button:hover {
   border: none;
   border-radius: 5px;
   color: black;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 #start:hover,
 #stop:hover,
 #reset:hover,
 #bgBtn:hover {
-  background-color: black;
+  background-color: black !important;
   opacity: 60%;
   color: white;
 }

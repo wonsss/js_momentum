@@ -23,6 +23,10 @@ function startWatch() {
   swDiv.style.backgroundColor = "rgba(0, 255, 106, 0.55)";
   lasttimeTitle.innerText = "You restarted to focus at ";
   lasttimeSpan.innerText = getClock();
+  swStartBtn.removeEventListener("click", startWatch);
+  swStopBtn.addEventListener("click", stopWatch);
+  swStartBtn.style.backgroundColor = "rgba(0, 0, 0, 0.55)";
+  swStopBtn.style.backgroundColor = "white";
   return seconds;
 }
 
@@ -43,6 +47,10 @@ function stopWatch() {
   focusTime.innerText = "⏹️ Focus Time"
   lasttimeTitle.innerText = "You stopped focusing at ";
   lasttimeSpan.innerText = getClock();
+  swStopBtn.removeEventListener("click", stopWatch);
+  swStartBtn.addEventListener("click", startWatch);
+  swStartBtn.style.backgroundColor = "white";
+  swStopBtn.style.backgroundColor = "rgba(0, 0, 0, 0.55)";
 }
 
 function resetWatch() {
@@ -57,6 +65,10 @@ function resetWatch() {
   let sec = parseInt((seconds % 3600) % 60);
   document.title = `⏹️ ${addZero(hour)}:${addZero(min)}:${addZero(sec)}`;
   focusTime.innerText = "⏹️ Focus Time"
+  swStartBtn.addEventListener("click", startWatch);
+  swStopBtn.addEventListener("click", stopWatch);
+  swStartBtn.style.backgroundColor = "white";
+  swStopBtn.style.backgroundColor = "white";
 }
 
 function getClock() {
