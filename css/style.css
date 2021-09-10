@@ -199,7 +199,7 @@ button:hover {
 #todo-form input {
   margin-top: 20px;
   text-align: center;
-  width: 350px;
+  width: 100%;
   background-color: transparent;
   border: none;
   border-bottom: 2.5px solid;
